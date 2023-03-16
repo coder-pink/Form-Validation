@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <title>Form Validation</title>
+    <style>
+        body {
+            background-color: rgb(97, 209, 243);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+        }
+
+        #form-container {
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 50px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 200px;
+            margin: 10px 0;
+            padding: 10px;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            width: 222px;
+            background-color: aqua;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            outline: none;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(9, 105, 105);
+            border-bottom: 2px solid black;
+        }
+
+        .error {
+            color: red;
+            margin: 0;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form-container">
+        <h2>LogIn Form</h2>
+        <form action="" onsubmit="return validateForm()">
+            <input type="text" name="text" id="username" placeholder="UserName"><br>
+            <p id="userError" class="error"></p>
+            <input type="password" name="password" id="password" placeholder="Password"><br>
+            <p id="passwordError" class="error"></p>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+</body>
+
+</html>
